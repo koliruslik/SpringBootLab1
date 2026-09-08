@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="uk" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" th:content="${name}">
+    <meta name="description" th:content="'Personal page of ' + ${name}">
+    <title th:text="${name}">Person</title>
+</head>
+<body>
+
+<h1 th:text="${name}">Name</h1>
+
+<p>Software Engineering student.</p>
+
+<h2>About me</h2>
+<p>
+    Information about this team member.
+</p>
+
+<h2>Interests</h2>
+<ul>
+    <li>
+        <a th:href="@{/person(name='Ruslan')}">Ruslan</a>
+    </li>
+
+    <li>
+        <a th:href="@{/person(name='Danya')}">Danya</a>
+    </li>
+
+    <li>
+        <a th:href="@{/person(name='Vova')}">Vova</a>
+    </li>
+</ul>
+
+<a th:href="@{/}">Back to team page</a>
+
+</body>
+</html>
